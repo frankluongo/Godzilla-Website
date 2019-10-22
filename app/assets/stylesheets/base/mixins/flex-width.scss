@@ -1,0 +1,4 @@
+@mixin flex-width($value) {
+  flex-basis: $value;
+  max-width: $value;
+}

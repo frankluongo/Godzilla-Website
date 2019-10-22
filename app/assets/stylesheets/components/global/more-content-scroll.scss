@@ -1,0 +1,18 @@
+.more-content-scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.more-content-scroll svg {
+  width: 1rem;
+}

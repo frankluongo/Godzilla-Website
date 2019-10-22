@@ -1,0 +1,49 @@
+$primary-green: hsl(61, 77%, 39%);
+$primary-red: hsl(351, 53%, 57%);
+$primary-gray: hsl(0, 0%, 7%);
+
+$greenscale: (
+  1: hsl(61, 77%, 70%),
+  2: hsl(61, 77%, 60%),
+  3: hsl(61, 77%, 50%),
+  4: hsl(61, 77%, 39%),
+  // $primary-green,
+  5: hsl(61, 77%, 32%),
+  6: hsl(61, 77%, 22%),
+  7: hsl(61, 77%, 12%)
+);
+
+$redscale: (
+  1: hsl(351, 53%, 87%),
+  2: hsl(351, 53%, 77%),
+  3: hsl(351, 53%, 67%),
+  4: hsl(351, 53%, 57%),
+  // $primary-red,
+  5: hsl(351, 53%, 47%),
+  6: hsl(351, 53%, 37%),
+  7: hsl(351, 53%, 27%)
+);
+
+$grayscale: (
+  0: hsl(0, 0%, 100%),
+  1: hsl(0, 0%, 97%),
+  2: hsl(0, 0%, 77%),
+  3: hsl(0, 0%, 57%),
+  4: hsl(0, 0%, 47%),
+  5: hsl(0, 0%, 30%),
+  6: hsl(0, 0%, 17%),
+  7: hsl(0, 0%, 7%),
+  /* $primary-gray */ 8: hsl(0, 0%, 0%)
+);
+
+@function primaryGreen($num: 4) {
+  @return map-get($greenscale, $num);
+}
+
+@function primaryRed($num: 4) {
+  @return map-get($redscale, $num);
+}
+
+@function primaryGray($num: 4) {
+  @return map-get($grayscale, $num);
+}

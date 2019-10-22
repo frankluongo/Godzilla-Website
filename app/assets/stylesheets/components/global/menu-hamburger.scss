@@ -26,9 +26,8 @@
   font-weight: bold;
   text-transform: uppercase;
 
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  background-color: transparent;
+  @include appearance-reset;
   border: none;
   border-radius: 0;
 }

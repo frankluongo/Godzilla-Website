@@ -1,0 +1,3 @@
+@function max-size($breakpoint-value) {
+  @return (breakpoint($breakpoint-value) - 1);
+}

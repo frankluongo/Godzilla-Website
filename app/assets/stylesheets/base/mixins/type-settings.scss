@@ -1,0 +1,157 @@
+$sans-serif: #{"Public Sans", "Roboto", "Helvetica", "Arial", sans-serif};
+$serif: #{"Merriweather", "Times New Roman", serif};
+
+@mixin a {
+  font-family: $sans-serif;
+  font-weight: 700;
+}
+
+@mixin address {
+  font-style: italic;
+  line-height: 1.6;
+}
+
+@mixin blockquote {
+  font-family: $serif;
+  font-size: 1.125rem;
+  font-style: italic;
+}
+
+@mixin button-text {
+  font-family: $sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin caption {
+  font-family: $serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+@mixin cite {
+  font-style: italic;
+}
+
+@mixin description-term {
+  font-family: $serif;
+  font-weight: bold;
+}
+
+@mixin h1 {
+  font-family: $serif;
+  font-size: 2rem;
+
+  @include breakpoint(small) {
+    font-size: 2.5rem;
+  }
+  @include breakpoint(medium) {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin h2 {
+  font-family: $sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  @include breakpoint(small) {
+    font-size: 1.75rem;
+  }
+  @include breakpoint(medium) {
+    font-size: 2rem;
+  }
+}
+
+@mixin h3 {
+  font-family: $serif;
+  font-size: 1.125rem;
+
+  @include breakpoint(small) {
+    font-size: 1.25rem;
+  }
+  @include breakpoint(medium) {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin i {
+  font-style: italic;
+}
+
+@mixin label-input {
+  font-family: $sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@mixin label-checkbox {
+  font-family: $sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+@mixin mark {
+  background-color: lcsBlue(1);
+}
+
+@mixin p {
+  font-family: $sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@mixin pre {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@mixin quote {
+  font-style: italic;
+}
+
+@mixin small {
+  font-size: 0.75em;
+}
+
+@mixin strong {
+  font-weight: 700;
+}
+
+// UI Typographic Elements
+
+@mixin ui-navigation-item {
+  font-family: $sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@mixin ui-subcopy {
+  font-family: $sans-serif;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+}
+
+@mixin ui-mini-copy {
+  font-family: $sans-serif;
+  font-size: 0.875rem;
+}
+
+@mixin ui-micro-copy {
+  font-family: $sans-serif;
+  font-size: 0.75rem;
+}
+
+@mixin ui-callout-heading {
+  font-family: $sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+@mixin ui-callout-copy {
+  font-family: $sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
