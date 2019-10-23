@@ -1,0 +1,37 @@
+.news {
+  min-height: 50vh;
+}
+
+.news__images {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-images__image {
+  display: flex;
+  align-items: center;
+  flex: 1 1 100%;
+  padding: 1rem;
+
+  color: white;
+}
+
+.news__feed {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
+
+@include media-query(medium) {
+  .news__feed {
+    gap: 2rem;
+
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+  }
+}

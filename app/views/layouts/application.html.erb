@@ -11,9 +11,10 @@
   </head>
 
   <body>
-    <header class="gz-header">
-      <%= react_component("MenuHamburger") %>
-    </header>
-    <%= yield %>
+    <%= react_component("modules/Header") %>
+    <main>
+      <%= yield %>
+    </main>
+    <%= react_component("modules/Footer") %>
   </body>
 </html>

@@ -1,7 +1,7 @@
 $directions: (top, left, bottom, right);
 
 @each $break, $value in $breakpoints {
-  @include breakpoint($break) {
+  @include media-query($break) {
     @each $direction in $directions {
       @for $i from 1 through 12 {
         .m-#{$break}-#{$direction}-#{$i} {

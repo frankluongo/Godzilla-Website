@@ -1,0 +1,19 @@
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+
+  min-height: 100vh;
+}
+
+.feature__content {
+  padding: 1rem;
+}
+
+@include media-query(medium) {
+  .feature__content {
+    padding: 3rem;
+  }
+}

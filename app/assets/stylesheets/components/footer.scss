@@ -1,0 +1,13 @@
+.footer {
+  padding: 1rem;
+}
+
+.footer__content {
+  min-height: 40vh;
+}
+
+@include media-query(medium) {
+  .footer {
+    padding: 3rem;
+  }
+}

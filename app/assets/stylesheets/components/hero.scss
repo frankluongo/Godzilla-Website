@@ -4,13 +4,13 @@
   justify-content: center;
   align-items: center;
 
-  min-height: 90vh;
-  max-height: 60rem;
+  height: 90vh;
+  max-height: 70rem;
 }
 
 .hero__more-content-scroll {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 50%;
 
   transform: translateX(-50%);

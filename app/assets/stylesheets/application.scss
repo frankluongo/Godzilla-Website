@@ -11,9 +11,12 @@
  * It is generally better to create a new file per style scope.
  */
 
-@import "base/variables/*";
 @import "base/functions/*";
+@import "base/variables/*";
 @import "base/mixins/*";
 @import "global/*";
 @import "components/global/*";
+@import "components/news/*";
 @import "components/*";
+@import "layouts/*";
+@import "utils/*";
