@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Dirty Headline';
+  src: asset-url('fonts/dirty-headline/dirty_headline-webfont.woff2')
+      format('woff2'),
+    asset-url('fonts/dirty-headline/dirty_headline-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,4 +20,17 @@ body,
 html,
 input {
   font-family: sans-serif;
+}
+
+h1 {
+  font-family: 'Dirty Headline', sans-serif;
+  text-transform: lowercase;
+}
+
+.sans-serif {
+  font-family: 'Dirty Headline', sans-serif;
+}
+
+.serif {
+  font-family: 'Libre Baskerville', serif;
 }

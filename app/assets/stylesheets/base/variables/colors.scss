@@ -1,49 +1,72 @@
-$primary-green: hsl(61, 77%, 39%);
-$primary-red: hsl(351, 53%, 57%);
-$primary-gray: hsl(0, 0%, 7%);
+$primary-yellow: hsl(57, 100%, 50%);
+$primary-red: hsl(358, 85%, 52%);
 
-$greenscale: (
-  1: hsl(61, 77%, 70%),
-  2: hsl(61, 77%, 60%),
-  3: hsl(61, 77%, 50%),
-  4: hsl(61, 77%, 39%),
-  // $primary-green,
-  5: hsl(61, 77%, 32%),
-  6: hsl(61, 77%, 22%),
-  7: hsl(61, 77%, 12%)
+$yellowScale: (
+  1: lighten($primary-yellow, 35),
+  2: lighten($primary-yellow, 25),
+  3: lighten($primary-yellow, 15),
+  4: $primary-yellow,
+  5: adjust-hue($primary-yellow, -5),
+  6: adjust-hue($primary-yellow, -10),
+  7: adjust-hue($primary-yellow, -15),
 );
 
-$redscale: (
-  1: hsl(351, 53%, 87%),
-  2: hsl(351, 53%, 77%),
-  3: hsl(351, 53%, 67%),
-  4: hsl(351, 53%, 57%),
-  // $primary-red,
-  5: hsl(351, 53%, 47%),
-  6: hsl(351, 53%, 37%),
-  7: hsl(351, 53%, 27%)
+$redScale: (
+  1: lighten($primary-red, 30),
+  2: lighten($primary-red, 20),
+  3: lighten($primary-red, 10),
+  4: $primary-red,
+  5: darken($primary-red, 15),
+  6: darken($primary-red, 25),
+  7: darken($primary-red, 35),
 );
 
-$grayscale: (
-  0: hsl(0, 0%, 100%),
-  1: hsl(0, 0%, 97%),
-  2: hsl(0, 0%, 77%),
-  3: hsl(0, 0%, 57%),
-  4: hsl(0, 0%, 47%),
-  5: hsl(0, 0%, 30%),
-  6: hsl(0, 0%, 17%),
-  7: hsl(0, 0%, 7%),
-  /* $primary-gray */ 8: hsl(0, 0%, 0%)
+$grayScale: (
+  0: hsl(0%, 0%, 100%),
+  1: hsl(0%, 0%, 96%),
+  2: hsl(0%, 0%, 92%),
+  3: hsl(0%, 0%, 80%),
+  4: hsl(0%, 0%, 60%),
+  5: hsl(0%, 0%, 30%),
+  6: hsl(0%, 0%, 20%),
+  7: hsl(0%, 0%, 15%),
+  8: hsl(0%, 0%, 0%),
 );
 
-@function primaryGreen($num: 4) {
-  @return map-get($greenscale, $num);
+@function primaryYellow($num: 4) {
+  @return map-get($yellowScale, $num);
 }
 
 @function primaryRed($num: 4) {
-  @return map-get($redscale, $num);
+  @return map-get($redScale, $num);
 }
 
 @function primaryGray($num: 4) {
-  @return map-get($grayscale, $num);
+  @return map-get($grayScale, $num);
+}
+
+.colors {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.color {
+  padding-top: 100%;
+}
+
+@for $i from 1 through 7 {
+  .yellow-#{$i} {
+    background-color: primaryYellow($i);
+  }
+}
+@for $i from 1 through 7 {
+  .red-#{$i} {
+    background-color: primaryRed($i);
+  }
+}
+@for $i from 0 through 8 {
+  .gray-#{$i} {
+    background-color: primaryGray($i);
+  }
 }

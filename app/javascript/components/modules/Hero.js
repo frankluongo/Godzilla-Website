@@ -1,14 +1,18 @@
-import React from "react";
-import MoreContentScroll from "../global/MoreContentScroll";
+import React from 'react';
+import MoreContentScroll from '../global/MoreContentScroll';
 
-const Hero = () => {
+const Hero = ({ bgImage }) => {
   return (
     <section
-      className="hero box has-background-image"
-      style={{ backgroundImage: "url('https://placekitten.com/1920/1080')" }}
+      className="hero has-background-image"
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
       <article className="hero__content container">
-        This is the hero content
+        <h1>
+          Godzilla
+          <br />
+          <small>King of The Monsters</small>
+        </h1>
       </article>
       <MoreContentScroll inheritedClasses="hero__more-content-scroll" />
     </section>

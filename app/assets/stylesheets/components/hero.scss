@@ -6,6 +6,23 @@
 
   height: 90vh;
   max-height: 70rem;
+
+  color: primaryGray(0);
+}
+
+.hero:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  content: '';
+  background-color: rgba(primaryGray(7), 0.5);
+}
+
+.hero__content {
+  position: relative;
 }
 
 .hero__more-content-scroll {
