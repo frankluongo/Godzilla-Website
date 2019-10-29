@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { animated, useSpring } from 'react-spring';
+import Logo from '../../icons/Logo';
 
 const MenuHamburger = () => {
   const [on, toggle] = useState(false);
@@ -17,12 +18,8 @@ const MenuHamburger = () => {
         className="menu-hamburger__toggle"
         onClick={toggleHamburger.bind(this)}
       >
-        <div className="menu-hamburger-toggle__bars">
-          <span className="menu-hamburger-toggle__bar row-1" />
-          <span className="menu-hamburger-toggle__bar row-2" />
-          <span className="menu-hamburger-toggle__bar row-3" />
-        </div>
         Menu
+        <Logo />
       </button>
       <animated.div className="menu-hamburger" style={animation}>
         <div className="menu-hamburger__header">

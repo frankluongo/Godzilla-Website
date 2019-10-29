@@ -23,6 +23,19 @@
 
 .hero__content {
   position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__content h1 {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.hero__content small {
+  display: block;
+
+  font-size: 0.39em;
 }
 
 .hero__more-content-scroll {
@@ -31,4 +44,25 @@
   left: 50%;
 
   transform: translateX(-50%);
+}
+
+@include media-query(small) {
+  .hero__content h1 {
+    font-size: 6rem;
+  }
+}
+
+@include media-query(medium) {
+  .hero__content h1 {
+    font-size: 8rem;
+  }
+
+  .hero__content {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hero-content__inner {
+    margin-right: 8rem;
+  }
 }

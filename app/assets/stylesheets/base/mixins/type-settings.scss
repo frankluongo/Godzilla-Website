@@ -1,5 +1,5 @@
-$sans-serif: #{"Public Sans", "Roboto", "Helvetica", "Arial", sans-serif};
-$serif: #{"Merriweather", "Times New Roman", serif};
+$sans-serif: #{'Dirty Headline', sans-serif};
+$serif: #{'Libre Baskerville', serif};
 
 @mixin a {
   font-family: $sans-serif;

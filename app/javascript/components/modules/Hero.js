@@ -1,5 +1,6 @@
 import React from 'react';
 import MoreContentScroll from '../global/MoreContentScroll';
+import Navigation from '../global/Navigation';
 
 const Hero = ({ bgImage }) => {
   return (
@@ -8,11 +9,13 @@ const Hero = ({ bgImage }) => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <article className="hero__content container">
-        <h1>
-          Godzilla
-          <br />
-          <small>King of The Monsters</small>
-        </h1>
+        <div className="hero-content__inner">
+          <h1>
+            Godzilla
+            <small>King of The Monsters</small>
+          </h1>
+          <Navigation inheritedClasses="hero-navigation" />
+        </div>
       </article>
       <MoreContentScroll inheritedClasses="hero__more-content-scroll" />
     </section>

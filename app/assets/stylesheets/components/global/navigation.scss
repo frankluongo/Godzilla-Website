@@ -1,0 +1,55 @@
+.website-navigation {
+}
+
+.website-navigation a {
+  font-family: $serif;
+  font-style: italic;
+  text-decoration: none;
+}
+
+// Variations
+
+.hero-navigation {
+  padding-top: 1rem;
+}
+
+.hero-navigation li {
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.hero-navigation a {
+  color: primaryGray(0);
+  font-size: 1.25rem;
+  text-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+}
+
+@include media-query(small) {
+  .hero-navigation {
+    padding-top: 2rem;
+  }
+
+  .hero-navigation li {
+    margin-bottom: 2rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  .hero-navigation a {
+    font-size: 1.5rem;
+  }
+}
+
+@include media-query(medium) {
+  .hero-navigation {
+    padding-top: 3rem;
+  }
+
+  .hero-navigation a {
+    font-size: 2rem;
+  }
+}
