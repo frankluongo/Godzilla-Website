@@ -1,22 +1,22 @@
-import React from "react";
-import Article from "./News/Article";
+import React from 'react';
+import Article from './News/Article';
 
-const News = () => {
+const News = ({ image1, image2 }) => {
   return (
     <section className="news layout-split">
       <div className="news__images">
         <figure
           className="has-background-image news-images__image"
-          style={{ backgroundImage: "url('http://placekitten.com/600/600')" }}
+          style={{ backgroundImage: `url('${image1}')` }}
         >
-          image goes here
+          <h2 className="news-images__title sans-serif">
+            <small>godzilla</small>News
+          </h2>
         </figure>
         <figure
           className="has-background-image news-images__image"
-          style={{ backgroundImage: "url('http://placekitten.com/700/700')" }}
-        >
-          image goes here
-        </figure>
+          style={{ backgroundImage: `url('${image2}')` }}
+        />
       </div>
       <div className="news__feed">
         <Article />

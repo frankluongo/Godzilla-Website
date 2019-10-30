@@ -13,6 +13,8 @@
   <body>
     <%= react_component("modules/Header") %>
     <main>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </main>
     <%= react_component("modules/Footer") %>

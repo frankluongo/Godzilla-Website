@@ -7,6 +7,17 @@
   flex-direction: column;
 }
 
+.news-images__title {
+  padding: 1rem;
+
+  font-size: 3rem;
+}
+
+.news-images__title small {
+  display: block;
+  font-size: 0.4em;
+}
+
 .news-images__image {
   display: flex;
   align-items: center;
@@ -26,6 +37,12 @@
   padding-top: 1rem;
 }
 
+@include media-query(small) {
+  .news-images__title {
+    font-size: 6rem;
+  }
+}
+
 @include media-query(medium) {
   .news__feed {
     gap: 2rem;
@@ -33,5 +50,11 @@
     padding-bottom: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
+  }
+
+  .news-images__title {
+    padding: 3rem;
+
+    font-size: 8rem;
   }
 }

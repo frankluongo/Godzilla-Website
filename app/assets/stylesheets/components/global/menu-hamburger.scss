@@ -18,6 +18,32 @@
   padding: 1rem;
 }
 
+.menu-hamburger__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
+  padding: 0;
+
+  background-color: transparent;
+  @include appearance-reset;
+  border: 1px solid primaryGray(8);
+  border-radius: 50%;
+}
+
+.menu-hamburger__close .icon {
+  height: 1rem;
+}
+
+.menu-hamburger-header__heading {
+  flex: 1 1 auto;
+
+  font-size: 2rem;
+}
+
 .menu-hamburger__toggle {
   display: flex;
   align-items: center;
