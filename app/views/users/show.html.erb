@@ -1,0 +1,8 @@
+<section class="content">
+  <%= @user.inspect %>
+  <div class="block">
+    <%= link_to "Delete Account", user_path, method: :delete, data: { confirm: "Are You Sure?" } %>
+  </div>
+</section>
+
+
