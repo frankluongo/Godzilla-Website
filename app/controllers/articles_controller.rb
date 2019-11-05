@@ -2,9 +2,11 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    @articles = Article.all
   end
 
   def show
+    get_article
   end
 
   def new
@@ -20,7 +22,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to article_path, notice: "Article Created!" }
+        format.html { redirect_to article_path slug: @article.slug, notice: "Article Created!" }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { redirect_to new_article_path, notice: @article.errors }
@@ -30,12 +32,28 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    get_article
   end
 
   def update
+    @article = Article.find(params[:slug])
+
+    respond_to do |format|
+      if @article.update(article_params)
+        format.html { redirect_to article_path slug: @article.slug, notice: "Article Updated!" }
+        format.json { render :show, status: :created, location: @article }
+      else
+        format.html { redirect_to edit_article_path(slug: @article.slug), notice: @article.errors }
+        format.json { render json: @article.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
+    get_article
+
+    @article.destroy
+    redirect_to articles_path, notice: "Article Successfully Deleted!"
   end
 
   private
@@ -45,7 +63,12 @@ class ArticlesController < ApplicationController
       :title,
       :content,
       :user_id,
-      :slug
+      :slug,
+      :teaser
     )
+  end
+
+  def get_article
+    @article = Article.find_by slug: params[:slug]
   end
 end

@@ -1,0 +1,8 @@
+<div class="m-xsmall-top-3">
+  <%= link_to "View All Articles", articles_path %> |
+<% if current_user %>
+  <%= link_to "Edit Article", edit_article_path(slug: @article.slug) %>
+  | <%= link_to "Delete Article", article_path(slug: @article.slug), method: :delete, data: { confirm: "Are You Sure?" } %>
+<% end %>
+</div>
+

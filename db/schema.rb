@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_03_183841) do
+ActiveRecord::Schema.define(version: 2019_11_04_220226) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title", default: "", null: false
     t.text "content", default: "", null: false
     t.integer "user_id"
     t.string "slug"
+    t.text "teaser"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
