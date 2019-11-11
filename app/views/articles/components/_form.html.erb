@@ -14,6 +14,11 @@
     <%= form.text_area :teaser %>
   </p>
 
+  <div class="form-control">
+    <%= form.label :image, "Product Image" %>
+    <%= form.file_field :image %>
+  </div>
+
   <p>
     <%= form.submit %>
   </p>

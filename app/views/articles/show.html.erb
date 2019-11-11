@@ -2,6 +2,9 @@
   <div class="m-xsmall-top-5 m-xsmall-bottom-2">
     <h1><%= @article.title %></h1>
   </div>
+  <div class="m-xsmall-bottom-2">
+    <img src="<%= @article.image_url(:small) %>" alt="<%= @article.title %>">
+  </div>
   <div class="article-content">
     <%= simple_format(@article.content) %>
   </div>
