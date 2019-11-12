@@ -24,12 +24,18 @@ input {
 
 h1 {
   font-family: 'Dirty Headline', sans-serif;
+  font-size: 4rem;
   text-transform: lowercase;
 }
 
 h2 {
   font-family: 'Dirty Headline', sans-serif;
+  font-size: 3rem;
   text-transform: lowercase;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 .sans-serif {
@@ -39,4 +45,8 @@ h2 {
 
 .serif {
   font-family: 'Libre Baskerville', serif;
+}
+
+.italic {
+  font-style: italic;
 }

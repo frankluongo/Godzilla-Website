@@ -1,9 +1,9 @@
 import React from 'react';
 import Article from './News/Article';
 
-const News = ({ image1, image2 }) => {
+const News = ({ image1, image2, articles }) => {
   return (
-    <section className="news layout-split">
+    <section className="news layout-split container">
       <div className="news__images">
         <figure
           className="has-background-image news-images__image"
@@ -19,10 +19,9 @@ const News = ({ image1, image2 }) => {
         />
       </div>
       <div className="news__feed">
-        <Article />
-        <Article />
-        <Article />
-        <Article />
+        {articles.map(article => (
+          <Article key={article.id} content={article} />
+        ))}
       </div>
     </section>
   );

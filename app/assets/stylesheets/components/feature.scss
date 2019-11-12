@@ -1,15 +1,43 @@
 .feature {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 8rem;
   padding-top: 8rem;
 
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 50rem;
+}
+
+.feature:before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .feature__content {
+  position: relative;
   padding: 1rem;
+}
+
+.feature__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 90%;
+  max-width: 60rem;
+
+  @include elevation(2);
+  transform: translate3d(-50%, -50%, 0);
 }
 
 @include media-query(medium) {

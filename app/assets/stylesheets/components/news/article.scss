@@ -1,5 +1,39 @@
 .article {
-  padding: 1rem;
+  display: flex;
+
+  color: primaryGray(7);
+  text-decoration: none;
 
   @include elevation(1);
+}
+
+.article__image {
+  flex: 1 0 33%;
+}
+
+.article__content {
+  position: relative;
+
+  padding: 1rem 2rem;
+}
+
+.article__content:before {
+  display: inline-block;
+
+  content: 'Newly Added';
+  margin: -1rem 0 1rem -2rem;
+  padding: 0.5rem 1rem;
+
+  color: primaryGray(0);
+  font-family: 'Dirty Headline', sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 0;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+  text-transform: lowercase;
+
+  background-color: primaryRed(4);
+}
+
+.article-content__title {
+  font-size: 2.5rem;
 }

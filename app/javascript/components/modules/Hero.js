@@ -5,7 +5,7 @@ import Navigation from '../global/Navigation';
 const Hero = ({ bgImage }) => {
   return (
     <section
-      className="hero has-background-image"
+      className="hero has-background-image container"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <article className="hero__content container">
