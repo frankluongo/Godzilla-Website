@@ -38,7 +38,7 @@ gem 'webpacker'
 gem 'react-rails'
 gem 'devise'
 # Image Upload
-gem 'carrierwave', '~> 2.0', '>= 2.0.1'
+gem 'carrierwave', '~> 2.1'
 # Image Minification & Generating Thumbnails
 gem 'mini_magick'
 
